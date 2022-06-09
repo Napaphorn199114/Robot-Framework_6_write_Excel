@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220606 13:11:21.096" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Openpyxl" source="D:\Advance_Robot_Python\Robot Framework_6_write_Excel\robot_openpyxl.robot">
+<test id="s1-t1" name="Test Write Excel" line="11">
+<kw name="Load Workbook" library="openpyxl">
+<var>${wb}</var>
+<arg>D:\\Advance_Robot_Python\\Robot Framework_6_write_Excel/${excel}</arg>
+<doc>Open the given filename and return the workbook</doc>
+<msg timestamp="20220606 13:11:21.423" level="INFO">${wb} = &lt;openpyxl.workbook.workbook.Workbook object at 0x000002A34F49AC20&gt;</msg>
+<status status="PASS" starttime="20220606 13:11:21.415" endtime="20220606 13:11:21.423"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${wb}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220606 13:11:21.423" endtime="20220606 13:11:21.423"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${ws}</var>
+<arg>${wb['Sheet1']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220606 13:11:21.423" level="INFO">${ws} = &lt;Worksheet "Sheet1"&gt;</msg>
+<status status="PASS" starttime="20220606 13:11:21.423" endtime="20220606 13:11:21.423"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${ws}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220606 13:11:21.423" endtime="20220606 13:11:21.427"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<arg>$ws.cell(2,3,"เพิ่มข้อความ")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" starttime="20220606 13:11:21.427" endtime="20220606 13:11:21.433"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<arg>$ws.cell(2,4,10)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" starttime="20220606 13:11:21.434" endtime="20220606 13:11:21.434"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<arg>$ws.cell(2,5,'${data}')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" starttime="20220606 13:11:21.434" endtime="20220606 13:11:21.435"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<arg>$wb.save('${excel}')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" starttime="20220606 13:11:21.435" endtime="20220606 13:11:21.470"/>
+</kw>
+<status status="PASS" starttime="20220606 13:11:21.409" endtime="20220606 13:11:21.471"/>
+</test>
+<status status="PASS" starttime="20220606 13:11:21.096" endtime="20220606 13:11:21.473"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Openpyxl">Robot Openpyxl</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
