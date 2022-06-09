@@ -6,4 +6,4 @@ Library    String , openpyxl , BuiltIn
 Library    openpyxl 
 ->pip install openpyxl
 
-การดึงงข้อมูลจากไฟล์ Excel -> .xlsx / .xlsm / .xltx / .xltm
+การดึงข้อมูลจากไฟล์ Excel -> .xlsx / .xlsm / .xltx / .xltm
